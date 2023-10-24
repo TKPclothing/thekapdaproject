@@ -455,7 +455,8 @@ const Header = () => {
                     onClick={handleMenuCloseClick}
                   />
                   <NavLinks
-                    pageLink="/blogs"
+                    pageLink="https://the-kapda-project.beehiiv.com"
+                    target="_blank"
                     title="blog"
                     classTitle="nav-item"
                     onClick={handleMenuCloseClick}
