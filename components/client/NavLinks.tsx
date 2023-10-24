@@ -3,6 +3,7 @@ type NavLinksProps = {
   pageLink: string;
   classTitle: string;
   onClick?: (selectedCategory: string) => void;
+  target?: string;
 };
 
 export default function NavLinks({
@@ -10,6 +11,7 @@ export default function NavLinks({
   pageLink,
   classTitle,
   onClick,
+  target,
 }: NavLinksProps) {
   const handleClick = () => {
     if (onClick) {
@@ -19,7 +21,12 @@ export default function NavLinks({
 
   return (
     <li>
-      <a href={pageLink} className={classTitle} onClick={handleClick}>
+      <a
+        href={pageLink}
+        className={classTitle}
+        onClick={handleClick}
+        target={target}
+      >
         {title}
       </a>
     </li>

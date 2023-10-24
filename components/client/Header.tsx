@@ -320,6 +320,7 @@ const Header = () => {
                 />
                 <NavLinks
                   pageLink="https://the-kapda-project.beehiiv.com"
+                  target="_blank"
                   title="blog"
                   classTitle="nav-item"
                   onClick={handleMenuCloseClick}

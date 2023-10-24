@@ -1159,6 +1159,7 @@
 //*----------> largeMobile
 @media screen and (max-width: 768px) {
   .about-main {
+    margin-top: 230px;
     .about-section {
       position: relative;
       display: flex;
@@ -1788,7 +1789,7 @@
             margin-top: -3vh;
 
             .about-content-description {
-              font-size: .9rem;
+              font-size: 0.9rem;
               color: v.$dark;
               display: inline;
 
@@ -1941,7 +1942,7 @@
           h2 {
             font-family: v.$fontRR;
             font-weight: 100;
-            font-size: .9rem;
+            font-size: 0.9rem;
           }
 
           .solution-text {
@@ -2025,7 +2026,7 @@
           h2 {
             font-family: v.$fontRR;
             color: v.$light;
-            font-size: .8rem;
+            font-size: 0.8rem;
           }
 
           .solution-scroll-one-text,
@@ -2252,7 +2253,7 @@
           h3 {
             position: relative;
             font-family: v.$fontRL;
-            font-size: .8rem;
+            font-size: 0.8rem;
             font-weight: 600;
             color: v.$bg;
           }
