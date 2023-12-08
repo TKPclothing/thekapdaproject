@@ -33,7 +33,7 @@ function uuid() {
   return [...new Array(35)]
     .map(() => srr[Math.floor(Math.random() * srr.length)])
     .toString()
-    .replace(",", "");
+    .join("");
 }
 export async function POST(request: Request) {
   try {
