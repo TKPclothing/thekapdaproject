@@ -32,8 +32,7 @@ function uuid() {
   ];
   return [...new Array(35)]
     .map(() => srr[Math.floor(Math.random() * srr.length)])
-    
-    .join("");
+    .toString();
 }
 export async function POST(request: Request) {
   try {
@@ -44,7 +43,7 @@ export async function POST(request: Request) {
     const payload = {
       merchantId: process.env.NEXT_PRIVATE_MERCHANTID,
       merchantTransactionId: orderId,
-      merchantUserId: uuid(),
+      merchantUserId: uuid().replace(",", ""),
       //amount: parseFloat(`${price}.00`) * 100,
       amount: parseFloat(`${price}`) * 100,
       redirectUrl: `${process.env.NEXT_PHONEPE_REDIRECT}/api/paymentConfrom/${order_id}`,
@@ -63,7 +62,7 @@ export async function POST(request: Request) {
     let salt_key = process.env.NEXT_PRIVATE_PHONEPE_SALT_KEY;
     let salt_index = process.env.NEXT_PRIVATE_SALT_INDEX;
     let res = await axios.post(
-      "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay",
+      "https://api.phonepe.com/apis/hermes/pg/v1/pay",
       {
         request: data.toString("base64"),
       },
