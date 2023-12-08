@@ -30,7 +30,7 @@ export async function POST(request: Request) {
     let salt_key = process.env.NEXT_PRIVATE_PHONEPE_SALT_KEY;
     let salt_index = process.env.NEXT_PRIVATE_SALT_INDEX;
     let res = await axios.post(
-      "https://api-preprod.phonepe.com/apis/pg-sandbox/pg/v1/pay",
+      "https://api.phonepe.com/apis/hermes/pg/v1/pay",
       {
         request: data.toString("base64"),
       },
