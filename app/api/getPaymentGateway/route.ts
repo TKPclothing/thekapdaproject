@@ -43,13 +43,13 @@ export async function POST(request: Request) {
     const payload = {
       merchantId: process.env.NEXT_PRIVATE_MERCHANTID,
       merchantTransactionId: orderId,
-      merchantUserId: uuid().replace(",", ""),
+      merchantUserId:process.env.NEXT_PRIVATE_MERCHANTID ,
       //amount: parseFloat(`${price}.00`) * 100,
       amount: parseFloat(`${price}`) * 100,
       redirectUrl: `${process.env.NEXT_PHONEPE_REDIRECT}/api/paymentConfrom/${order_id}`,
       redirectMode: "POST",
       callbackUrl: `${process.env.NEXT_PHONEPE_REDIRECT}/thankyou`,
-      mobileNumber: phoneNo,
+      mobileNumber: "+91808075160",
       paymentInstrument: {
         type: "PAY_PAGE",
       },
