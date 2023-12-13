@@ -49,7 +49,7 @@ export async function POST(request: Request) {
       redirectUrl: `${process.env.NEXT_PHONEPE_REDIRECT}/api/paymentConfrom/${order_id}`,
       redirectMode: "POST",
       callbackUrl: `${process.env.NEXT_PHONEPE_REDIRECT}/thankyou`,
-      mobileNumber: "+91808075160",
+      mobileNumber: "808075160",
       paymentInstrument: {
         type: "PAY_PAGE",
       },
