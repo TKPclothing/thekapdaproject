@@ -47,7 +47,7 @@ export default function Product({ params }: Props) {
 
     fetchRelatedProducts();
 
-    console.log(relatedProducts);
+    //console.log(relatedProducts);
   }, []);
 
   useEffect(() => {
