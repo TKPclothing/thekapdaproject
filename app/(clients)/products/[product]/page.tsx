@@ -221,13 +221,8 @@ export default function Product({ params }: Props) {
                                     ? "/checkout/shippingInfo/authorize"
                                     : "/checkout/shippingInfo/"
                                 );
-                              });}
-                             else {
-                    toast.error("You Must Login First", {
-                      theme: "colored",
-                      autoClose: 1500,
-                      hideProgressBar: true,
-                    });
+                              });
+                            
                             }
                           );
                         }
@@ -236,7 +231,13 @@ export default function Product({ params }: Props) {
                           autoClose: 800,
                           hideProgressBar: true,
                         });
-                      })
+                      })}
+                      else {
+                        toast.error("You Must Login First", {
+                          theme: "colored",
+                          autoClose: 1500,
+                          hideProgressBar: true,
+                        });}
                   } else if (!product.isAvailable) {
                     toast.error("Product is Out of stack", {
                       theme: "colored",
